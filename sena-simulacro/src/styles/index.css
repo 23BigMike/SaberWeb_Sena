@@ -1,0 +1,49 @@
+/* index.css — Utilidades globales adicionales */
+
+/* Bootstrap overrides */
+.btn { border-radius: var(--radius-md) !important; font-weight: 600 !important; transition: var(--trans-normal) !important; }
+.btn:active { transform: scale(.97) !important; }
+
+.badge { border-radius: 6px !important; font-weight: 600 !important; }
+
+/* Contenedor principal */
+.container-simulacro {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  width: 100%;
+}
+
+/* Tarjetas base */
+.card-simulacro {
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  border: none;
+  overflow: hidden;
+}
+
+/* Degradado hero */
+.hero-gradient {
+  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 50%, var(--primary-light) 100%);
+}
+
+/* Progress bar custom */
+.progress-custom {
+  height: 8px;
+  border-radius: 999px;
+  background: #e2e8f0;
+  overflow: hidden;
+}
+.progress-custom .progress-fill {
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--primary-light), var(--accent));
+  transition: width .5s cubic-bezier(.4,0,.2,1);
+}
+
+/* Responsive helpers */
+@media (max-width: 576px) {
+  .hide-mobile { display: none !important; }
+  .text-sm-small { font-size: .85rem !important; }
+}

@@ -1,0 +1,84 @@
+/* ========================
+   NAVBAR.CSS
+   ======================== */
+
+.navbar-simulacro {
+  background: linear-gradient(90deg, var(--primary-dark) 0%, var(--primary) 100%);
+  padding: .75rem 1.5rem;
+  box-shadow: 0 2px 20px rgba(0,0,0,.25);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-brand-wrapper {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  text-decoration: none;
+}
+
+.navbar-logo {
+  width: 42px;
+  height: 42px;
+  background: linear-gradient(135deg, var(--accent), #ff8c42);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  box-shadow: 0 4px 12px rgba(245,166,35,.4);
+  flex-shrink: 0;
+}
+
+.navbar-title {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.15rem;
+  color: #fff;
+  letter-spacing: -.3px;
+}
+
+.navbar-subtitle {
+  font-size: .72rem;
+  color: rgba(255,255,255,.65);
+  font-weight: 400;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.navbar-badges {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+.navbar-badge {
+  background: rgba(255,255,255,.12);
+  color: rgba(255,255,255,.9);
+  border: 1px solid rgba(255,255,255,.2);
+  border-radius: 8px;
+  padding: .3rem .65rem;
+  font-size: .75rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: .3rem;
+}
+
+.navbar-icfes-badge {
+  background: var(--accent);
+  color: var(--primary-dark);
+  border-color: var(--accent);
+  font-weight: 700;
+}
+
+@media (max-width: 576px) {
+  .navbar-simulacro { padding: .6rem 1rem; }
+  .navbar-title { font-size: 1rem; }
+  .navbar-badge.hide-mobile { display: none; }
+}

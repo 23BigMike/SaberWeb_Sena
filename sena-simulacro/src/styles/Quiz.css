@@ -1,0 +1,148 @@
+/* ========================
+   QUIZ.CSS
+   ======================== */
+
+.quiz-page {
+  padding: 1.5rem 1rem 3rem;
+  min-height: calc(100vh - 70px);
+  background: var(--bg-main);
+  animation: fadeIn .4s ease;
+}
+
+/* Header del quiz */
+.quiz-header {
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  padding: 1.1rem 1.4rem;
+  margin-bottom: 1.25rem;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  border: 1px solid rgba(0,0,0,.04);
+}
+
+.quiz-pregunta-num {
+  font-family: var(--font-display);
+  font-size: .78rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  white-space: nowrap;
+}
+
+.quiz-progress-bar {
+  flex: 1;
+  min-width: 120px;
+}
+
+.progress-track {
+  height: 8px;
+  background: #e2e8f0;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--primary-light), var(--accent));
+  transition: width .5s cubic-bezier(.4,0,.2,1);
+}
+
+/* Temporizador */
+.quiz-timer {
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+  background: var(--primary-dark);
+  color: #fff;
+  border-radius: 10px;
+  padding: .45rem .85rem;
+  font-weight: 700;
+  font-size: .95rem;
+  font-variant-numeric: tabular-nums;
+  min-width: 72px;
+  justify-content: center;
+}
+
+.quiz-timer.warning {
+  background: var(--warning);
+  color: var(--primary-dark);
+  animation: countdownPulse .5s ease infinite;
+}
+
+.quiz-timer.danger {
+  background: var(--danger);
+  animation: countdownPulse .3s ease infinite;
+}
+
+.timer-icon {
+  font-size: 1rem;
+}
+
+/* Puntuación en vivo */
+.quiz-score-live {
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+  background: rgba(34,197,94,.12);
+  color: #16a34a;
+  border-radius: 10px;
+  padding: .4rem .8rem;
+  font-weight: 700;
+  font-size: .88rem;
+  border: 1px solid rgba(34,197,94,.25);
+}
+
+/* Botón salir */
+.btn-salir {
+  background: rgba(239,68,68,.1);
+  color: var(--danger);
+  border: 1px solid rgba(239,68,68,.2);
+  border-radius: 10px;
+  padding: .4rem .8rem;
+  font-size: .82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--trans-fast);
+  white-space: nowrap;
+}
+.btn-salir:hover {
+  background: rgba(239,68,68,.2);
+}
+
+/* Prueba badge */
+.prueba-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+  padding: .35rem .8rem;
+  border-radius: 999px;
+  font-size: .78rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: .3px;
+  margin-bottom: .75rem;
+}
+
+.dificultad-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: .3rem;
+  padding: .2rem .65rem;
+  border-radius: 999px;
+  font-size: .72rem;
+  font-weight: 700;
+  margin-left: .4rem;
+}
+
+@media (max-width: 576px) {
+  .quiz-header {
+    gap: .7rem;
+    padding: .9rem 1rem;
+  }
+  .quiz-score-live, .btn-salir { font-size: .78rem; padding: .35rem .65rem; }
+}

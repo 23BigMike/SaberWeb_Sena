@@ -1,0 +1,109 @@
+/* ============================
+   GLOBAL.CSS — Variables y base
+   ============================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Sora:wght@400;600;700;800&display=swap');
+
+:root {
+  /* Paleta principal */
+  --primary:       #1a3c6e;
+  --primary-light: #2657a8;
+  --primary-dark:  #0f2447;
+  --accent:        #f5a623;
+  --accent-dark:   #d4891a;
+  --success:       #22c55e;
+  --danger:        #ef4444;
+  --warning:       #f59e0b;
+  --info:          #3b82f6;
+
+  /* Pruebas */
+  --color-lectura:  #e74c3c;
+  --color-mate:     #8e44ad;
+  --color-sociales: #16a085;
+  --color-ciencias: #27ae60;
+  --color-ingles:   #2980b9;
+
+  /* Fondo */
+  --bg-main:   #f0f4f9;
+  --bg-card:   #ffffff;
+  --bg-dark:   #0f172a;
+  --bg-light:  #f8fafc;
+
+  /* Texto */
+  --text-main:  #1e293b;
+  --text-muted: #64748b;
+  --text-light: #94a3b8;
+
+  /* Sombras */
+  --shadow-sm:  0 1px 3px rgba(0,0,0,.08), 0 1px 2px rgba(0,0,0,.06);
+  --shadow-md:  0 4px 16px rgba(0,0,0,.1);
+  --shadow-lg:  0 10px 40px rgba(0,0,0,.15);
+  --shadow-xl:  0 20px 60px rgba(0,0,0,.2);
+
+  /* Bordes */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+
+  /* Transiciones */
+  --trans-fast:   all .15s ease;
+  --trans-normal: all .25s ease;
+  --trans-slow:   all .4s cubic-bezier(.4,0,.2,1);
+
+  /* Tipografía */
+  --font-display: 'Sora', sans-serif;
+  --font-body:    'Space Grotesk', sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg-main);
+  color: var(--text-main);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* Scroll */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-light); }
+::-webkit-scrollbar-thumb { background: var(--primary-light); border-radius: 10px; }
+
+/* Animaciones base */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-30px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(245,166,35,.4); }
+  50%       { box-shadow: 0 0 0 12px rgba(245,166,35,0); }
+}
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+@keyframes bounceIn {
+  0%   { transform: scale(.7); opacity: 0; }
+  60%  { transform: scale(1.05); opacity: 1; }
+  100% { transform: scale(1); }
+}
+@keyframes countdownPulse {
+  0%, 100% { transform: scale(1); }
+  50%       { transform: scale(1.1); }
+}
+
+.animate-fade  { animation: fadeIn .5s ease both; }
+.animate-slide { animation: slideInLeft .4s ease both; }
+.animate-bounce-in { animation: bounceIn .4s ease both; }
